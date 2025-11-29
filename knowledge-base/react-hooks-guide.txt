@@ -1,0 +1,15 @@
+React Hooks: A Complete Guide
+
+React Hooks were introduced in React 16.8 as a revolutionary way to write functional components with state and lifecycle methods. They eliminate the need for class components in most scenarios and provide a more intuitive API for managing component logic.
+
+The most fundamental hook is useState, which allows you to add state to functional components. It returns an array with two elements: the current state value and a function to update it. For example, const [count, setCount] = useState(0) creates a state variable called count with an initial value of 0.
+
+useEffect is another essential hook that handles side effects in functional components. It combines the functionality of componentDidMount, componentDidUpdate, and componentWillUnmount lifecycle methods. You can use it to fetch data, set up subscriptions, or manually change the DOM. The dependency array controls when the effect runs - an empty array means it runs once after mounting, while omitting it means it runs after every render.
+
+Custom hooks are a powerful feature that allows you to extract component logic into reusable functions. They must start with "use" and can call other hooks. For instance, you might create a useApi hook to handle API requests across multiple components.
+
+Advanced hooks like useReducer provide more sophisticated state management for complex scenarios. It's particularly useful when the next state depends on the previous one or when you have complex state logic. useContext allows you to consume React context without wrapping your component in a Consumer.
+
+Performance optimization hooks include useMemo and useCallback. useMemo memoizes expensive calculations, while useCallback memoizes function references to prevent unnecessary re-renders of child components.
+
+Best practices for hooks include: always call hooks at the top level of your function, never inside loops or conditions; use the ESLint plugin for hooks to catch common mistakes; keep effects focused and split them when they serve different purposes; and always include dependencies in the dependency array to avoid stale closures.

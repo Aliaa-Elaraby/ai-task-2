@@ -1,0 +1,20 @@
+{
+  "name": "smart-document-qa-system",
+  "version": "1.0.0",
+  "description": "A RAG-based document Q&A system with source attribution and evaluation metrics",
+  "type": "module",
+  "main": "interactive-qa.js",
+  "scripts": {
+    "setup": "node 1-create-embeddings.js",
+    "start": "node interactive-qa.js",
+    "evaluate": "node evaluation-system.js",
+    "demo": "node 2-rag-system.js"
+  },
+  "keywords": ["RAG", "AI", "Q&A", "embeddings", "semantic-search"],
+  "author": "Smart Document Q&A System",
+  "license": "MIT",
+  "dependencies": {
+    "openai": "^4.0.0",
+    "dotenv": "^16.0.0"
+  }
+}
